@@ -24,8 +24,10 @@ TOKEN = $token
 REPO_OWNER = $1
 REPO_NAME = $2
 
-function 
+function form_url{
+curl -s -u "${USERNAME}${TOKEN}"
+
+}
 
    
 
-function 
