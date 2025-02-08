@@ -25,7 +25,8 @@ REPO_OWNER = $1
 REPO_NAME = $2
 
 function form_url{
-curl -s -u "${USERNAME}${TOKEN}"
+url = "${API_URL}${REPO_OWNER}/${REPO_NAME}/collaborators"
+curl -s -u "${USERNAME}${TOKEN}${API_URL}${url}"
 
 }
 
