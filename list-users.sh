@@ -26,9 +26,10 @@ REPO_NAME = $2
 
 function form_url{
 url = "${API_URL}${REPO_OWNER}/${REPO_NAME}/collaborators"
-curl -s -u "${USERNAME}${TOKEN}${API_URL}${url}"
+curl -s -u "${USERNAME}${TOKEN}${API_URL}$url" | jq -r '.[] | select(.permission.pull == true) | .login  
 
 }
 
+form_url()
    
 
